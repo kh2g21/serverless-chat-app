@@ -1,0 +1,246 @@
+/* style.css */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+.chat-container {
+  display: flex;
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.sidebar {
+  flex: 1;
+  padding: 20px;
+  background-color: #59085f;
+  color: #fff;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.user-count {
+  font-size: 20px;
+  margin-top: 40px;
+}
+
+.chat {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-messages {
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding-top: 65px;
+  padding-left: 10px;
+}
+
+.chat-message {
+  margin-top: 25px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #b1b1b1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  max-width: calc(50% - 20px); /* Limit width to half of chat box */
+}
+.message-time-container {
+  text-align: right;
+  margin-top: -25px; /* Adjust the margin-top value to move the timestamp up */
+  margin-right: 20px;
+  font-style: italic;
+}
+
+.new-message-divider-line {
+  border: none;
+  border-top: 1px dotted #ccc; /* Create the dotted line */
+  text-align: center;
+  width: 100%; /* Adjust the width as needed */
+  line-height: 0.1em; /* Adjust line height */
+  margin: 10px auto; /* Center the line horizontally */
+  margin-top: 20px; /* Adjust margin-top as needed */
+  color: rgb(255, 57, 57);
+}
+
+.new-message-divider-line span {
+  background: #fff; /* Background color to hide dots on the text */
+  padding: 0 10px; /* Adjust padding as needed */
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: 10px;
+  color: rgb(255, 57, 57);
+}
+
+.message-time-chat {
+  text-align: left;
+  font-style: italic;
+  margin-top: -25px;
+}
+
+.message-time-chat span {
+  margin-top: -15px;
+  margin-left: 5px;
+}
+
+.chat-message::before {
+  content: "";
+  position: absolute;
+  bottom: -16px; /* Position the triangle at the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 16px 8px 0 8px; /* Adjust border-width for triangle */
+  border-color: #b1b1b1 transparent transparent transparent; /* Adjust border-color for triangle */
+}
+
+.chat-message-other-user {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #4a90e2; /* Change background color */
+  color: white;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  max-width: calc(50% - 20px); /* Limit width to half of chat box */
+  margin-left: auto; /* Align message to the right */
+  margin-right: 3px;
+}
+
+.chat-message-other-user::before {
+  content: "";
+  position: absolute;
+  bottom: -16px; /* Position the triangle at the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 16px 8px 0 8px; /* Adjust border-width for triangle */
+  border-color: #4a90e2 transparent transparent transparent; /* Adjust border-color for triangle */
+}
+
+.system-message {
+  margin-top: 25px;
+  font-style: italic;
+}
+
+.chat-input {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input input[type="text"] {
+  width: 200px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+  font-size: 16px;
+  transition: width 1s;
+}
+
+.chat-input input[type="text"]:hover,
+.chat-input input[type="text"]:focus {
+  width: 350px;
+}
+
+.title {
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.chat-input .send-icon {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #999999;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #666666;
+}
+
+.upload-button {
+  cursor: pointer;
+  display: inline-block;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.upload-button img {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer-content {
+  margin-bottom: 20px;
+}
+
+.footer-content h2 {
+  margin-bottom: 10px;
+}
+
+.footer-content p {
+  margin: 5px 0;
+}
+
+.connection-buttons {
+  margin-top: 40px;
+}
+
+.connection-buttons button {
+  cursor: pointer;
+  background-color: #9cb121; /* Adjusted color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 25px; /* Increased padding */
+  margin-right: 30px; /* Increased margin */
+  font-size: 18px; /* Slightly increased font size */
+  transition: background-color 0.3s;
+  margin-bottom: 20px;
+}
+
+.connection-buttons button:hover {
+  background-color: #9a5a1e;
+}
